@@ -49,6 +49,11 @@ int main(){
 	cout << endl;
 	
 	// handle the data
-	int SpotData[Spots][Elements.size()] = Elements*Spots
+	int SpotData[Spots][Elements.size()];
+	for(int i = 0; i<sizeof(SpotData); i++){
+		SpotData[i] = Elements;
+	}
+	
+	
 	
 }
