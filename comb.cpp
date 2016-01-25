@@ -1,7 +1,7 @@
 // all combination finder without laying back each element
 #include <iostream>
 #include <string>
-#include
+#include <stringstream>
 using namespace std;
 int occurances(string subject, string totest){
 	int occs = 0;
@@ -12,7 +12,17 @@ int occurances(string subject, string totest){
 	}
 	return occs;
 }
-
+int toint(string str){
+	stringstream stream;
+	stream << str;
+	
+	int OurInteger;
+	stream >> OurInteger;
+	stream.str("");
+	stream.clear();
+	
+	return OurInteger;
+}
 int main(){
 	//get user input
 	cout << "write numbers to use (seperate with , and without spaces): ";
@@ -26,7 +36,8 @@ int main(){
 		string letter = ElementInput.at(i);
 		
 		if(letter != ","){
-			Elements[ElementsIter] = 	
+			// yes we are that simple
+			Elements[ElementsIter] = toint(letter);
 		}
 	}
 }
