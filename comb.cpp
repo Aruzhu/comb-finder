@@ -30,6 +30,8 @@ int main(){
 	getline(cin, ElementInput);
 	cin.clear();
 	
+	cout << endl;
+	
 	int Elements[ occs(ElementInput, ",") ];
 	int ElementsIter = 0;
 	for(int i = 0; i<ElementInput.size(); i++){
@@ -40,4 +42,13 @@ int main(){
 			Elements[ElementsIter] = toint(letter);
 		}
 	}
+	int Spots;
+	cout << "numbers of spots? (whole number): ";
+	cin >> Spots;
+	cin.clear();
+	cout << endl;
+	
+	// handle the data
+	int SpotData[Spots][Elements.size()] = Elements*Spots
+	
 }
